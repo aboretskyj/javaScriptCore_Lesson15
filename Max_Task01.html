@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lesson 15. Maximum</title>
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: auto;
+        }
+
+        ul {  list-style: none;  padding:0  }
+
+        a {  
+            text-decoration: none;
+            color: white;
+        }
+
+        .dropdown {  margin-left: 20px  }
+
+        .dropdown .dropbtn, .dropdown-content li{
+            width: 200px;
+            font-size: 18px;  
+            color: white;
+            padding: 10px;
+            margin: 0;
+            border: 1px solid #fff;
+            background-color: forestgreen;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+
+    <ul class="dropdown">
+        <li class="dropbtn" id="drop">Університет:</li>
+        <ul class="dropdown-content hidden">
+            <li><a href="#">кафедра ІСМ</a></li>
+            <li><a href="#">кафедра ЕСМ</a></li>
+            <li><a href="#">кафедра політології</a></li>
+        </ul>
+    </ul>
+
+    <script>
+        var menuBut = document.getElementsByClassName("dropbtn");
+        for (i = 0; i < menuBut.length; i++) {
+            menuBut[i].onclick = function(){
+                console.log(this.nextElementSibling);
+                this.nextElementSibling.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
